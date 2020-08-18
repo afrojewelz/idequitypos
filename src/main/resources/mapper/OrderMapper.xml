@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tk.lemetweaku.idequitypos.dao.OrderDao">
+
+
+    <select id="getAll" resultType="java.lang.String">
+        SELECT * FROM transac_order
+    </select>
+
+    <insert id="insertTransac" parameterType="tk.lemetweaku.idequitypos.entity.Order">
+        INSERT INTO tryout.transac_order (trade_id,version,quantity,security_code,command,trade_mark)
+        VALUES(#{tradeID}, #{version}, #{quantity}, #{securityCode}, #{command}, #{tradeMark})
+    </insert>
+</mapper>
